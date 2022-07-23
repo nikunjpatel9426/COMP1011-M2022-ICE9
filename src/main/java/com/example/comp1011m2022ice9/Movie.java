@@ -7,7 +7,6 @@ public class Movie {
     // Private Instance Members
     @SerializedName("Title")
     private String m_title;
-
     @SerializedName("Year")
     private String m_year;
 
@@ -16,7 +15,6 @@ public class Movie {
 
     @SerializedName("Released")
     private String m_released;
-
     @SerializedName("Runtime")
     private String m_runtime;
 
@@ -30,6 +28,7 @@ public class Movie {
     private String m_writers;
 
     @SerializedName("Actors")
+
     private String m_actors;
 
     @SerializedName("Plot")
@@ -43,17 +42,13 @@ public class Movie {
 
     @SerializedName("Type")
     private String m_type;
-
-
     // Getters and Setters (Mutators and Accessors)
 
     public String getTitle() {
-        return m_title;
-    }
+        return m_title;}
 
     public void setTitle(String title) {
-        this.m_title = title;
-    }
+        this.m_title = title;}
 
     public String getYear() {
         return m_year;
@@ -64,16 +59,14 @@ public class Movie {
     }
 
     public String getRated() {
-        return m_rated;
-    }
+        return m_rated;}
 
     public void setRated(String rated) {
         this.m_rated = rated;
     }
 
     public String getReleased() {
-        return m_released;
-    }
+        return m_released;}
 
     public void setReleased(String released) {
         this.m_released = released;
@@ -84,8 +77,7 @@ public class Movie {
     }
 
     public void setRuntime(String runtime) {
-        this.m_runtime = runtime;
-    }
+        this.m_runtime = runtime;}
 
     public String getGenre() {
         return m_genre;
@@ -96,8 +88,7 @@ public class Movie {
     }
 
     public String getDirector() {
-        return m_director;
-    }
+        return m_director;}
 
     public void setDirector(String director) {
         this.m_director = director;
@@ -108,8 +99,7 @@ public class Movie {
     }
 
     public void setWriters(String writers) {
-        this.m_writers = writers;
-    }
+        this.m_writers = writers;}
 
     public String getActors() {
         return m_actors;
@@ -140,8 +130,7 @@ public class Movie {
     }
 
     public void setIMDB_ID(String imdbId) {
-        this.m_imdbID = imdbId;
-    }
+        this.m_imdbID = imdbId;}
 
     public String getType() {
         return m_type;
@@ -190,10 +179,6 @@ public class Movie {
 
         return String.format("Title: %s%nYear: %s%nRated: %s%nReleased: %s%nRuntime: %s%nGenre: %s%nDirector: %s%nWriters: %s%nActors: %s%nPlot: %s%nPoster: %s%nIMDB ID: %s%nType: %s%n",
                 getTitle(), getYear(), getRated(), getReleased(), getRuntime(), getGenre(), getDirector(),
-                getWriters(), getActors(), getPlot(), getPoster(), getIMDB_ID(), getType());
-
-
-
-    }
+                getWriters(), getActors(), getPlot(), getPoster(), getIMDB_ID(), getType());}
 }
 
