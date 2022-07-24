@@ -23,7 +23,7 @@ public class ScenManager
             //Step 4. Check if the private instance member variable is null
             if (m_instance == null) {
 
-                //Step 5. Initiate a new DBMember instance
+                //Step 5. Initiate a new ScenManager instance
                 m_instance = new ScenManager();
             }
             return m_instance;
@@ -31,14 +31,14 @@ public class ScenManager
 
         /*************************/
 
-        public  void  changeScen(ActionEvent event, String  FXMLFilename) throws IOException {
-            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(FXMLFilename));
+        public void changeScene(ActionEvent event, String FXMLFileName) throws IOException
+        {
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(FXMLFileName));
             Scene scene = new Scene(fxmlLoader.load());
 
-            Stage Stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Stage.setScene(scene);
-            Stage.show();
-
-
+            // derive the stage (window) from the action event (button press)
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
         }
 }

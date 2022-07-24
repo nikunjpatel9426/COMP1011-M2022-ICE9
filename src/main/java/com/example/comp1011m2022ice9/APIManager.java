@@ -22,7 +22,7 @@ public class APIManager {
         //Step 4. Check if the private instance member variable is null
         if (m_instance == null) {
 
-            //Step 5. Initiate a new DBMember instance
+            //Step 5. Initiate a new APIManager instance
             m_instance = new APIManager();
         }
         return m_instance;
@@ -61,7 +61,7 @@ public class APIManager {
     public MovieSearchResults getMovieFromOMDBBySearchTerm(String searchTerm) {
         // Step 1. Construct your URL
         String APIKey = "769bf72f";
-        searchTerm = searchTerm.replace("","%20");
+        searchTerm = searchTerm.replace(" ","%20");
         String URL = "https://www.omdbapi.com/?apikey=" + APIKey + "&s=" + searchTerm;
 
         // Step 2. Create a Client Object
